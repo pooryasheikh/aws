@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "properties": {
+      "webContent": {
+        "description": "Content for nginx default page",
+        "type": "string"
+      },
+      "replicaCount": {
+        "description": "Replica count for deployment nginx",
+        "minimum": 1,
+        "maximum": 10,
+        "type": "integer"
+      },
+      "vault": {
+        "description": "Vault init container",
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "replicaCount"
+    ],
+    "title": "Values",
+    "type": "object"
+  }
